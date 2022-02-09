@@ -21,4 +21,4 @@
 
 // console.log(`Hello, ${userName}`);
 
-// console.log(Boolean(-Infinity));
+console.log(Boolean(-Infinity));
