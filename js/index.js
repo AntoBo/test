@@ -1,7 +1,14 @@
-const date = new Date();
+const pokemonEl = qs
 
-console.log(date);
-// "Fri Jun 18 2021 15:01:35 GMT+0300 (Eastern European Summer Time)"
 
-console.log(date.toString());
-// "Fri Jun 18 2021 15:01:35 GMT+0300 (Eastern European Summer Time)"
+
+fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+  .then(responce => {
+    return responce.json();
+  })
+  .then(pokemon => {
+    console.log(pokemon.sprites.front_default);
+  })
+  .catch(error => {
+    console.log(error);
+  });
