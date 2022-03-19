@@ -1,6 +1,7 @@
-console.log(localStorage);
-localStorage.setItem('ui-theme', 'light');
-console.log(localStorage.getItem('ui-theme')); // "dark"
+const date = new Date();
 
-localStorage.removeItem('ui-theme');
-console.log(localStorage.getItem('ui-theme')); // null
+console.log(date);
+// "Fri Jun 18 2021 15:01:35 GMT+0300 (Eastern European Summer Time)"
+
+console.log(date.toString());
+// "Fri Jun 18 2021 15:01:35 GMT+0300 (Eastern European Summer Time)"
