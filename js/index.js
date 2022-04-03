@@ -1,13 +1,11 @@
-const pokemonEl = document.querySelector('.pokemon-container');
+const target = document.querySelector('.target');
 
-fetch('https://pokeapi.co/api/v2/pokemon/199')
-  .then(responce => {
-    return responce.json();
-  })
-  .then(pokemon => {
-    console.log(pokemon.sprites.front_default);
-    pokemonEl.innerHTML = `<img src="${pokemon.sprites.front_default}">`;
-  })
-  .catch(error => {
-    console.log('pokemon is lost with error: ', error);
-  });
+const observer = new IntersectionObserver(
+  entries => {
+    if (entries[0].isIntersecting) console.log('Element is fully visible in screen');
+    console.log(entries);
+  },
+  { threshold: 0 }
+);
+
+observer.observe(target);
